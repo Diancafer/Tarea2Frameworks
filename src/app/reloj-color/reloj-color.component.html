@@ -1,0 +1,8 @@
+<div class="reloj-color-container" [style.backgroundColor]="backgroundColor">
+  <h1>Reloj de Color</h1>
+  <div class="color-display" [style.color]="backgroundColor === '#000000' ? '#ffffff' : '#000000'">
+    {{ displayTime }}
+  </div>
+  <label for="time-adjust">Ajustar Hora:</label>
+  <input type="time" id="time-adjust" (change)="adjustTime($event)" />
+</div>

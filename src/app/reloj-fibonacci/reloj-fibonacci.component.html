@@ -1,0 +1,15 @@
+<div class="reloj-fibonacci-container">
+  <h1>Reloj de Fibonacci</h1>
+  <div class="fibonacci-grid">
+    <div *ngFor="let block of fibBlocks"
+         class="fib-block"
+         [style.width.px]="block.value * 30"
+         [style.height.px]="block.value * 30"
+         [style.background-color]="block.color">
+      <span class="block-value">{{ block.value }}</span>
+    </div>
+  </div>
+  <div class="digital-time">{{ displayTime }}</div>
+  <label for="time-adjust">Ajustar Hora:</label>
+  <input type="time" id="time-adjust" (change)="adjustTime($event)" />
+</div>

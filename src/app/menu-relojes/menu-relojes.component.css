@@ -1,0 +1,194 @@
+/* Contenedor principal del menú y la visualización del reloj */
+.menu-relojes-container {
+  display: flex;
+  min-height: 100vh;
+  /* Fondo con gradiente rosa a morado, similar al login/registro */
+  background: linear-gradient(135deg, #FFC0CB 0%, #8A2BE2 100%); /* Rosa claro a Azul Violeta (Morado) */
+  font-family: 'Poppins', sans-serif; /* Consistente con login/registro */
+  color: #333;
+}
+
+/* Estilos para el panel lateral del menú */
+.menu {
+  width: 240px;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco translúcido, similar a las cajas de formulario */
+  padding: 25px 15px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255, 255, 255, 0.3); /* Borde más sutil */
+  overflow-x: hidden;
+  backdrop-filter: blur(5px); /* Efecto de desenfoque, similar a las cajas de formulario */
+  border-radius: 0 12px 12px 0; /* Bordes redondeados solo a la derecha para un estilo moderno */
+}
+
+.menu h2 {
+  font-size: 1.8rem; /* Un poco más grande para destacar */
+  color: #8A2BE2; /* Morado intenso */
+  margin-bottom: 25px; /* Más espacio */
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.8px; /* Mayor espaciado */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  margin-bottom: 25px; /* Espacio entre la lista y el botón de logout */
+}
+
+.menu ul li {
+  margin-bottom: 12px; /* Más espacio entre elementos de lista */
+}
+
+/* Estilos base para los botones de navegación (enlaces) */
+.nav-button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 18px; /* Padding ligeramente mayor */
+  background: linear-gradient(45deg, #DDA0DD 0%, #BA55D3 100%); /* Gradiente rosa-morado */
+  color: white;
+  border: none;
+  border-radius: 10px; /* Bordes más redondeados */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.05rem; /* Tamaño de fuente ligeramente mayor */
+  font-weight: 600;
+  transition: all 0.3s ease; /* Transición más completa y suave */
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto hover para los botones de navegación */
+.nav-button:hover {
+  background: linear-gradient(45deg, #BA55D3 0%, #DDA0DD 100%); /* Invertir gradiente al hover */
+  transform: translateY(-3px); /* Efecto de elevación más pronunciado */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el botón de navegación activo (seleccionado) */
+.nav-button.active {
+  background: linear-gradient(45deg, #8A2BE2 0%, #9932CC 100%); /* Gradiente morado intenso */
+  font-weight: bold;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+  border: 2px solid #4B0082; /* Borde morado oscuro */
+  transform: translateY(0);
+}
+
+/* --- Estilos para el botón de Cerrar Sesión --- */
+.logout-button {
+  background: linear-gradient(45deg, #FF69B4 0%, #C71585 100%); /* Gradiente rosa fuerte */
+  color: white;
+  border: none;
+  padding: 14px 18px; /* Padding ligeramente mayor */
+  border-radius: 10px; /* Bordes más redondeados */
+  cursor: pointer;
+  font-size: 1.05rem; /* Tamaño de fuente ligeramente mayor */
+  font-weight: 600;
+  width: 100%;
+  margin-top: auto; /* Empuja el botón al final del contenedor flex */
+  transition: all 0.3s ease; /* Transición más completa y suave */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+}
+
+.logout-button:hover {
+  background: linear-gradient(45deg, #C71585 0%, #FF69B4 100%); /* Invertir gradiente al hover */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor principal donde se muestra el reloj */
+.reloj-display {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px; /* Padding un poco más generoso */
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo sutilmente translúcido */
+  backdrop-filter: blur(3px); /* Ligero desenfoque */
+  border-radius: 12px; /* Bordes redondeados para el display principal */
+  margin: 20px; /* Espacio alrededor del display */
+}
+
+/* Contenedor del reloj individual */
+.reloj-container {
+  width: 100%;
+  max-width: 550px;
+  min-height: 350px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido para el reloj */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px; /* Padding más generoso dentro del reloj */
+  border: 1px solid rgba(138, 43, 226, 0.3); /* Borde morado sutil */
+  flex-grow: 1;
+}
+
+/* Pequeñas adaptaciones para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .menu-relojes-container {
+    flex-direction: column;
+  }
+
+  .menu {
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0 0 12px 12px; /* Bordes redondeados solo en la parte inferior para móvil */
+  }
+
+  .menu h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+
+  .menu ul li {
+    margin-bottom: 0;
+  }
+
+  .nav-button {
+    width: auto;
+    flex-grow: 1;
+    min-width: 100px;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+
+  .logout-button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+
+  .reloj-display {
+    padding: 15px;
+    margin: 10px; /* Menor margen en móvil */
+  }
+
+  .reloj-container {
+    padding: 25px;
+    min-height: 250px;
+  }
+}

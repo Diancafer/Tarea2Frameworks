@@ -1,0 +1,10 @@
+<div class="clock">
+  <div class="hand hour" [style.transform]="'rotate(' + hourAngle + 'deg)'"></div>
+  <div class="hand minute" [style.transform]="'rotate(' + minuteAngle + 'deg)'"></div>
+  <div class="hand second" [style.transform]="'rotate(' + secondAngle + 'deg)'"></div>
+  <div class="center-dot"></div>
+</div>
+<div class="time-adjust">
+  <label for="time">Ajustar Hora:</label>
+  <input type="time" id="time" (change)="adjustTime($event)" />
+</div>

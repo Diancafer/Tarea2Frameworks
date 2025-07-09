@@ -1,0 +1,9 @@
+<div class="reloj-mundial-container">
+  <h1>Reloj Mundial</h1>
+  <div class="timezone-list">
+    <div *ngFor="let tz of timezones" class="timezone-item">
+      <span class="timezone-name">{{ tz.name }}</span>
+      <span class="timezone-time">{{ tz.time }}</span>
+    </div>
+  </div>
+</div>

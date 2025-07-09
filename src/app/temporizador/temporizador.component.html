@@ -1,0 +1,22 @@
+<div class="temporizador-container">
+  <h1>Temporizador</h1>
+
+  <div class="time-input">
+    <label for="inputMinutes">Minutos:</label>
+    <input type="number" id="inputMinutes" [(ngModel)]="inputMinutes" (change)="setInitialTime()" min="1" max="999">
+  </div>
+
+  <div class="display" [class.finished]="isFinished">
+    <span>{{ formatTime(remainingHours) }}:</span>
+    <span>{{ formatTime(remainingMinutes) }}:</span>
+    <span>{{ formatTime(remainingSeconds) }}</span>
+  </div>
+
+  <div class="controls">
+    <button (click)="start()" [disabled]="isRunning || isFinished">Iniciar</button>
+    <button (click)="stop()" [disabled]="!isRunning">Pausar</button>
+    <button (click)="reset()">Reiniciar</button>
+  </div>
+
+  <p *ngIf="isFinished" class="message">¡Tiempo terminado!</p>
+</div>

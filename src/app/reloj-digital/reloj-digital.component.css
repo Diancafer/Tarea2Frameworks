@@ -1,0 +1,80 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 50px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #8A2BE2; /* Morado intenso */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #FF69B4; /* Rosa fuerte */
+  background: #F8F0FF; /* Fondo lavanda muy claro */
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.2); /* Sombra morada */
+  margin-bottom: 30px;
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #BA55D3; /* Rosa medio */
+  margin-bottom: 10px;
+}
+
+input[type="time"] {
+  font-size: 1.2rem;
+  padding: 8px;
+  border: 2px solid #DDA0DD; /* Lila pastel */
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: #4B0082; /* Añil para el texto del input */
+  background-color: #F8F8FF; /* Fondo blanco azulado para el input */
+}
+
+input[type="time"]:focus {
+  border-color: #9932CC; /* Orquídea oscura al enfocar */
+  box-shadow: 0 0 8px rgba(138, 43, 226, 0.5); /* Sombra morada al enfocar */
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  color: #fff;
+  background: linear-gradient(45deg, #DDA0DD 0%, #8A2BE2 100%); /* Gradiente rosa-morado */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 10px;
+  box-shadow: 0 4px 10px rgba(138, 43, 226, 0.2); /* Sombra para el botón */
+}
+
+button:hover {
+  background: linear-gradient(45deg, #8A2BE2 0%, #DDA0DD 100%); /* Invertir gradiente al hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(138, 43, 226, 0.3);
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+form label {
+  margin-right: 5px;
+}

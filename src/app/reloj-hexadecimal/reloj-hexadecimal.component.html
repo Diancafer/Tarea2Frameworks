@@ -1,0 +1,8 @@
+<div class="reloj-hexadecimal-container">
+  <h1>Reloj Hexadecimal</h1>
+  <div class="hex-display">
+    {{ hexTime }}
+  </div>
+  <label for="timeInput">Ajustar Hora:</label>
+  <input id="timeInput" type="time" (change)="adjustTime($event)" />
+</div>

@@ -1,0 +1,11 @@
+<div class="reloj-digital">
+  <h1>Reloj Digital</h1>
+  <h2>{{ hours | number: '2.0' }}:{{ minutes | number: '2.0' }}:{{ seconds | number: '2.0' }}</h2>
+
+  <label for="time-adjust">Ajustar Hora:</label>
+  <input
+    id="time-adjust"
+    type="time"
+    (change)="adjustTime($event)"
+  />
+</div>

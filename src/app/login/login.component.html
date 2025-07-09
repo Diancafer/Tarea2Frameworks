@@ -1,0 +1,28 @@
+<div class="login-container">
+  <div class="login-box">
+    <h2>Iniciar Sesión</h2>
+    <form (ngSubmit)="handleSubmit()">
+      <input
+        type="text"
+        placeholder="Usuario"
+        [(ngModel)]="username"
+        name="username"
+        required
+      />
+      <input
+        type="password"
+        placeholder="Contraseña"
+        [(ngModel)]="password"
+        name="password"
+        required
+      />
+      <button type="submit">Entrar</button>
+    </form>
+    <p *ngIf="error" class="error">{{ error }}</p>
+    <p *ngIf="success" class="success">{{ success }}</p>
+    <p>
+      ¿No tienes una cuenta?
+      <a routerLink="/register">Regístrate aquí</a>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="reloj-palabras-container">
+    <h1>Reloj de Palabras</h1>
+    <div class="time-text">{{ timeInWords }}</div>
+    <label for="timeInput">Ajustar Hora:</label>
+    <input id="timeInput" type="time" (change)="adjustTime($event)" />
+  </div>
+  

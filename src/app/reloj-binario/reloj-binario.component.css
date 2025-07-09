@@ -1,0 +1,77 @@
+.reloj-binario-container {
+text-align: center;
+font-family: 'Poppins', sans-serif; /* Cambiamos la fuente a Poppins para consistencia */
+}
+h1 {
+font-size: 2.2rem; 
+margin-bottom: 1.5rem;
+color: #8A2BE2; 
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.led-grid {
+display: flex;
+flex-direction: column;
+gap: 25px; 
+align-items: center;
+justify-content: center;
+padding: 20px; 
+background-color: rgba(255, 255, 255, 0.1); 
+border-radius: 10px;
+}
+
+.row {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.binary-label {
+font-size: 1.3rem;
+font-weight: bold;
+color: #BA55D3; /* Rosa medio */
+}
+
+.binary-time {
+font-size: 1.3rem;
+font-weight: bold;
+color: #9932CC; /* Orquídea oscura */
+margin-right: 15px;
+}
+
+.leds {
+display: flex;
+gap: 8px;
+}
+
+.led {
+width: 24px; 
+height: 24px;
+border-radius: 5px; 
+background-color: #F8F0FF; 
+border: 1px solid #DA70D6; 
+transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.led.on {
+background-color: #DDA0DD; 
+border-color: #C71585; 
+box-shadow: 0 0 8px #FF69B4; 
+}
+
+label {
+display: block;
+margin: 1.5rem 0 0.8rem;
+font-size: 1.1rem;
+color: #8A2BE2; /* Morado */
+}
+
+input {
+padding: 8px 10px;
+font-size: 1.1rem;
+border: 1px solid #DA70D6;
+border-radius: 6px;
+text-align: center;
+color: #4B0082; 
+background-color: #F8F8FF; 
+}

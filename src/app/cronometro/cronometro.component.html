@@ -1,0 +1,14 @@
+<div class="cronometro-container">
+  <h1>Cronómetro</h1>
+  <div class="display">
+    <span>{{ formatTime(hours) }}:</span>
+    <span>{{ formatTime(minutes) }}:</span>
+    <span>{{ formatTime(seconds) }}.</span>
+    <span class="milliseconds">{{ formatTime(milliseconds, 3) }}</span>
+  </div>
+  <div class="controls">
+    <button (click)="start()" [disabled]="isRunning">Iniciar</button>
+    <button (click)="stop()" [disabled]="!isRunning">Pausar</button>
+    <button (click)="reset()">Reiniciar</button>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="reloj-binario-container">
+    <h1>Reloj Binario</h1>
+    <div class="led-grid">
+      <div class="row">
+        <span class="binary-label">Horas</span>
+        <span class="binary-time">{{ currentHours }}</span>
+        <div class="leds">
+          <div
+            *ngFor="let bit of binaryHours"
+            class="led"
+            [class.on]="bit"
+          ></div>
+        </div>
+      </div>
+      <div class="row">
+        <span class="binary-label">Minutos</span>
+        <span class="binary-time">{{ currentMinutes }}</span>
+        <div class="leds">
+          <div
+            *ngFor="let bit of binaryMinutes"
+            class="led"
+            [class.on]="bit"
+          ></div>
+        </div>
+      </div>
+      <div class="row">
+        <span class="binary-label">Segundos</span>
+        <span class="binary-time">{{ currentSeconds }}</span>
+        <div class="leds">
+          <div
+            *ngFor="let bit of binarySeconds"
+            class="led"
+            [class.on]="bit"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <label for="timeInput">Ajustar Hora:</label>
+    <input id="timeInput" type="time" (change)="adjustTime($event)" />
+  </div>
+  

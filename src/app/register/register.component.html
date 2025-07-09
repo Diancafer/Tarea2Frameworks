@@ -1,0 +1,38 @@
+<div class="register-container">
+  <div class="register-box">
+    <h2>Registro</h2>
+    <form (ngSubmit)="handleRegister()">
+      <input
+        type="text"
+        placeholder="Usuario"
+        [(ngModel)]="username"
+        name="username"
+        required
+      />
+      <div class="password-container">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          placeholder="Contraseña"
+          [(ngModel)]="password"
+          name="password"
+          required
+        />
+        <button
+          type="button"
+          class="toggle-password"
+          (click)="togglePasswordVisibility()"
+          aria-label="Mostrar/Ocultar contraseña"
+        >
+          <span [ngClass]="showPassword ? 'show-icon' : 'hide-icon'"></span>
+        </button>
+      </div>
+      <button type="submit">Registrarme</button>
+    </form>
+    <p *ngIf="error" class="error">{{ error }}</p>
+    <p *ngIf="success" class="success">{{ success }}</p>
+    <p>
+      ¿Ya tienes una cuenta?
+      <a routerLink="/login">Inicia Sesión aquí</a>
+    </p>
+  </div>
+</div>
