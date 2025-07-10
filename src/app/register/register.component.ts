@@ -27,14 +27,14 @@ export class RegisterComponent {
     // Validar la contraseña antes de intentar el registro
     if (!this.authService.validatePassword(this.password)) {
       this.error =
-        '¡Ay, no! La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas, números y un carácter especial (ej: !@#$%). ¡Ponte más creativa!';
+        '¡Ay, no! La contraseña debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas, números y un carácter especial (ej: !@#$%).';
       return;
     }
 
     const registered = this.authService.register(this.username, this.password);
 
     if (registered) {
-      this.success = '¡Registro exitoso! Prepárate para brillar. Redirigiendo para iniciar sesión...';
+      this.success = '¡Registro exitoso! Redirigiendo para iniciar sesión...';
       this.username = ''; // Limpiar campos
       this.password = ''; // Limpiar campos
       // Redirige al login después de 2 segundos para que el usuario inicie sesión
@@ -42,7 +42,7 @@ export class RegisterComponent {
         this.router.navigate(['/login']);
       }, 2000);
     } else {
-      this.error = '¡Uy! El nombre de usuario ya existe o hubo un problema al registrar. ¡Intenta con otro más fabuloso!';
+      this.error = '¡Uy! El nombre de usuario ya existe o hubo un problema al registrar. ¡Intenta con otro!';
     }
   }
 

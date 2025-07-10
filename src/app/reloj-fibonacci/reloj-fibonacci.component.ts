@@ -74,10 +74,7 @@ export class RelojFibonacciComponent implements OnInit {
     this.displayTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
   }
 
-  // El ajuste manual de la hora en un reloj de Fibonacci es complejo debido a su naturaleza visual.
-  // Aquí simplemente actualizaré la visualización si el usuario ajusta la hora,
-  // pero no hay una forma directa de "establecer" el estado de los bloques desde una hora arbitraria
-  // sin rehacer toda la lógica de asignación.
+
   adjustTime(event: Event): void {
     const input = event.target as HTMLInputElement;
     const [hours, minutes] = input.value.split(':').map(Number);

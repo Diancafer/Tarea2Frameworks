@@ -42,8 +42,7 @@ export class RelojAnalogicoComponent implements OnInit {
     const [hours, minutes] = input.value.split(':').map(Number);
 
     if (!isNaN(hours) && !isNaN(minutes)) {
-      // Ajustamos a formato de 12 horas para el cálculo del ángulo de la hora
-      // (aunque internamente se guarda en 24h para consistencia con Date)
+   
       this.hour = hours;
       this.minute = minutes;
       this.second = 0; // Reiniciamos los segundos al ajustar manualmente

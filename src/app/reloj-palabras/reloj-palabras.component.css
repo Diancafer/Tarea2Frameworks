@@ -2,52 +2,52 @@
   text-align: center;
   font-family: 'Poppins', sans-serif;
   margin: auto;
-  padding: 2.2rem; /* Un poco más de padding */
-  max-width: 420px; /* Ligeramente más ancho */
-  background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco translúcido */
-  border-radius: 15px; /* Bordes más redondeados */
-  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.2); /* Sombra morada */
-  border: 1px solid rgba(138, 43, 226, 0.3); /* Borde sutil */
+  padding: 2.2rem; 
+  max-width: 420px;
+  background-color: rgba(255, 255, 255, 0.95); 
+  border-radius: 15px; 
+  box-shadow: 0 8px 20px rgba(138, 43, 226, 0.2); 
+  border: 1px solid rgba(138, 43, 226, 0.3); 
 }
 
 h1 {
-  font-size: 2.2rem; /* Ligeramente más grande */
+  font-size: 2.2rem; 
   margin-bottom: 1.5rem;
-  color: #8A2BE2; /* Morado intenso */
+  color: #8A2BE2; 
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .time-text {
-  font-size: 1.8rem; /* Tamaño de fuente más grande para el texto */
+  font-size: 1.8rem; 
   margin-bottom: 1.5rem;
-  color: #4B0082; /* Añil oscuro para el texto de la hora */
+  color: #4B0082; 
   font-weight: bold;
-  background-color: #F8F0FF; /* Fondo lavanda muy claro */
+  background-color: #F8F0FF; 
   padding: 15px 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(138, 43, 226, 0.1); /* Sombra suave */
+  box-shadow: 0 4px 10px rgba(138, 43, 226, 0.1); 
 }
 
 label {
   display: block;
-  margin: 1.5rem 0 0.8rem; /* Más espacio */
+  margin: 1.5rem 0 0.8rem; 
   font-size: 1.1rem;
-  color: #BA55D3; /* Rosa medio */
+  color: #BA55D3; 
 }
 
 input[type='time'] {
-  padding: 8px 12px; /* Más padding */
+  padding: 8px 12px; 
   font-size: 1.1rem;
-  border: 2px solid #DDA0DD; /* Lila pastel */
-  border-radius: 8px; /* Bordes más redondeados */
+  border: 2px solid #DDA0DD;
+  border-radius: 8px; 
   text-align: center;
-  color: #4B0082; /* Añil para el texto del input */
-  background-color: #F8F8FF; /* Fondo blanco azulado para el input */
+  color: #4B0082; 
+  background-color: #F8F8FF;
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input[type='time']:focus {
-  border-color: #9932CC; /* Orquídea oscura al enfocar */
-  box-shadow: 0 0 8px rgba(138, 43, 226, 0.5); /* Sombra morada al enfocar */
+  border-color: #9932CC; 
+  box-shadow: 0 0 8px rgba(138, 43, 226, 0.5); 
 }

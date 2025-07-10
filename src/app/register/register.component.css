@@ -1,12 +1,12 @@
 
-.register-container, /* Aplica al contenedor principal tanto de registro como de login */
+.register-container, 
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* Fondo con gradiente rosa a morado */
-  background: linear-gradient(135deg, #FFC0CB 0%, #8A2BE2 100%); /* Rosa claro a Azul Violeta (Morado) */
+
+  background: linear-gradient(135deg, #FFC0CB 0%, #8A2BE2 100%); 
   font-family: 'Poppins', sans-serif;
   padding: 20px;
   box-sizing: border-box;
@@ -14,7 +14,7 @@
   position: relative;
 }
 
-/* Efecto de superposición para el fondo */
+
 .register-container::before,
 .login-container::before {
   content: '';
@@ -30,7 +30,7 @@
   z-index: 0;
 }
 
-/* Caja principal del formulario (registro y login) */
+
 .register-box,
 .login-box {
   background-color: rgba(255, 255, 255, 0.95);
@@ -58,15 +58,15 @@
 h2 {
   
   font-family: 'Poppins', sans-serif;
-  font-size: 2.8rem; /* Ajustado para ser más general, puedes usar 3.5rem si lo prefieres */
-  color: #8A2BE2; /* Morado intenso */
+  font-size: 2.8rem; 
+  color: #8A2BE2; 
   margin-bottom: 40px;
   font-weight: 700;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
-  letter-spacing: 1px; /* Ajustado para mejor legibilidad */
+  letter-spacing: 1px; 
 }
 
-/* Estilos del formulario y los campos de entrada */
+
 form {
   display: flex;
   flex-direction: column;
@@ -76,14 +76,12 @@ form {
 input {
   width: 100%;
   padding: 16px 20px;
-  /* Borde rosa suave */
-  border: 2px solid #DA70D6; /* Orquídea */
+  border: 2px solid #DA70D6; 
   border-radius: 10px;
   box-sizing: border-box;
   font-size: 1.15rem;
-  /* Texto morado oscuro */
-  color: #4B0082; /* Añil */
-  background-color: #F8F0FF; /* Fondo lavanda muy claro */
+  color: #4B0082; 
+  background-color: #F8F0FF; 
   transition: border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
 }
 

@@ -3,20 +3,17 @@ import { CommonModule } from "@angular/common";
 
 @Component({
   selector: 'app-reloj-palabras',
-  standalone: true, // ¡Ya estaba configurado como Standalone!
+  standalone: true, 
   templateUrl: './reloj-palabras.component.html',
   styleUrls: ['./reloj-palabras.component.css'],
-  imports: [CommonModule] // ¡Ya estaba importando CommonModule!
+  imports: [CommonModule] 
 })
 export class RelojPalabrasComponent implements OnInit {
   timeInWords: string = '';
-  currentDate: Date = new Date(); // Usado para el tiempo interno del reloj
+  currentDate: Date = new Date();
 
   ngOnInit(): void {
     this.updateTimeInWords();
-    // Actualiza el reloj cada minuto.
-    // Nota: Si quieres segundos, el intervalo debería ser 1000ms y la lógica de `convertTimeToWords`
-    // debería ser más granular o el reloj de palabras es por naturaleza menos preciso.
     setInterval(() => {
       this.currentDate = new Date(this.currentDate.getTime() + 60000); // Incrementa por 1 minuto
       this.updateTimeInWords();
@@ -61,8 +58,6 @@ export class RelojPalabrasComponent implements OnInit {
       'doce', 'una', 'dos', 'tres', 'cuatro', 'cinco', 'seis',
       'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'una' // 'doce' para 00:xx y 12:xx, 'una' para 13:xx
     ];
-    // Las frases de minutos se manejan con lógica en getMinuteWords
-    // const minutePhrases = [ ... ]; // No se usa directamente aquí, se construye
 
     // Determina la hora a mostrar (la siguiente hora si los minutos son > 30)
     let displayHour = hours % 12;

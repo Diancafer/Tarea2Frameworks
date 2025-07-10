@@ -74,14 +74,14 @@ form {
 input {
   width: 100%;
   padding: 16px 20px;
-  /* Borde rosa suave */
-  border: 2px solid #DA70D6; /* Orquídea */
+
+  border: 2px solid #DA70D6;
   border-radius: 10px;
   box-sizing: border-box;
   font-size: 1.15rem;
-  /* Texto morado oscuro */
-  color: #4B0082; /* Añil */
-  background-color: #F8F0FF; /* Fondo lavanda muy claro */
+
+  color: #4B0082; 
+  background-color: #F8F0FF; 
   transition: border-color 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
 }
 
@@ -91,8 +91,8 @@ input::placeholder {
 
 input:focus {
   /* Borde morado brillante al enfocar */
-  border-color: #9932CC; /* Orquídea Oscura */
-  box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.3); /* Sombra morada suave */
+  border-color: #9932CC; 
+  box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.3); 
   background-color: #FFFFFF;
   outline: none;
 }
@@ -132,25 +132,25 @@ button:active {
 .login-box p {
   margin-top: 30px;
   font-size: 1rem;
-  color: #696969; /* Gris oscuro para el texto normal */
+  color: #696969; 
   line-height: 1.5;
 }
 
 .login-box a {
-  color: #8A2BE2; /* Morado para el enlace */
+  color: #8A2BE2; 
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .login-box a:hover {
-  color: #6A1B9A; /* Morado más oscuro al pasar el ratón */
+  color: #6A1B9A; 
   text-decoration: underline;
 }
 
-/* Mensajes de error y éxito */
+
 .error {
-  color: #FF69B4; /* Rosa fuerte para error */
+  color: #FF69B4; 
   font-size: 0.95rem;
   margin-top: 15px;
   font-weight: 600;
@@ -158,27 +158,27 @@ button:active {
 }
 
 .success {
-  color: #EE82EE; /* Violeta para el éxito */
+  color: #EE82EE; 
   font-size: 0.95rem;
   margin-top: 15px;
   font-weight: 600;
   animation: pulse 0.8s infinite alternate;
 }
 
-/* Animación para el error */
+
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
   20%, 60% { transform: translateX(-5px); }
   40%, 80% { transform: translateX(5px); }
 }
 
-/* Animación para el éxito */
+
 @keyframes pulse {
   from { transform: scale(1); }
   to { transform: scale(1.02); }
 }
 
-/* Media Queries para responsividad */
+
 @media (max-width: 480px) {
   .login-box {
     padding: 35px 25px;
@@ -186,7 +186,7 @@ button:active {
   }
 
   h2 {
-    font-size: 2.5rem; /* Ajustado para pantallas pequeñas */
+    font-size: 2.5rem; 
     margin-bottom: 30px;
   }
 

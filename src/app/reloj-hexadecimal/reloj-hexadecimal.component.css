@@ -14,42 +14,42 @@
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #8A2BE2; /* Morado intenso */
+  color: #8A2BE2; 
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .hex-display {
   font-size: 3.5rem;
-  color: #FF69B4; /* Rosa fuerte */
+  color: #FF69B4; 
   font-weight: bold;
-  background-color: #F8F0FF; /* Fondo lavanda muy claro */
+  background-color: #F8F0FF; 
   padding: 15px 30px;
   border-radius: 12px;
   display: inline-block;
-  box-shadow: 0px 4px 12px rgba(138, 43, 226, 0.2); /* Sombra morada */
-  border: 1px solid #DDA0DD; /* Borde lila pastel */
+  box-shadow: 0px 4px 12px rgba(138, 43, 226, 0.2); 
+  border: 1px solid #DDA0DD; 
 }
 
 label {
   display: block;
   margin: 1.5rem 0 0.8rem;
   font-size: 1.1rem;
-  color: #BA55D3; /* Rosa medio */
+  color: #BA55D3;
 }
 
 input[type='time'] {
   padding: 8px 12px;
   font-size: 1.1rem;
-  border: 2px solid #DDA0DD; /* Lila pastel */
+  border: 2px solid #DDA0DD; 
   border-radius: 8px;
   text-align: center;
-  color: #4B0082; /* Añil para el texto del input */
-  background-color: #F8F8FF; /* Fondo blanco azulado para el input */
+  color: #4B0082; 
+  background-color: #F8F8FF;
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input[type='time']:focus {
-  border-color: #9932CC; /* Orquídea oscura al enfocar */
-  box-shadow: 0 0 8px rgba(138, 43, 226, 0.5); /* Sombra morada al enfocar */
+  border-color: #9932CC; 
+  box-shadow: 0 0 8px rgba(138, 43, 226, 0.5); 
 }

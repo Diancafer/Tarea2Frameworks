@@ -9,13 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./reloj-hexadecimal.component.css'],
 })
 export class RelojHexadecimalComponent implements OnInit {
-  hexTime: string = ''; // Usaremos una sola propiedad para la cadena hexadecimal
-  private time: Date = new Date(); // Usamos 'time' para mantener el estado interno
+  hexTime: string = ''; 
+  private time: Date = new Date(); 
 
   ngOnInit(): void {
     this.updateHexTime();
     setInterval(() => {
-      this.time.setSeconds(this.time.getSeconds() + 1); // Incrementa el tiempo interno
+      this.time.setSeconds(this.time.getSeconds() + 1); 
       this.updateHexTime();
     }, 1000);
   }

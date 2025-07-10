@@ -1,12 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // Para ngModel
+import { FormsModule } from '@angular/forms'; 
 import { interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-temporizador',
   standalone: true,
-  imports: [CommonModule, FormsModule], // Importar FormsModule
+  imports: [CommonModule, FormsModule], 
   templateUrl: './temporizador.component.html',
   styleUrls: ['./temporizador.component.css']
 })
@@ -45,7 +45,7 @@ export class TemporizadorComponent implements OnInit, OnDestroy {
         if (this.totalSeconds <= 0) {
           this.stop();
           this.isFinished = true;
-          // Aquí podrías reproducir un sonido o mostrar una notificación
+        
         }
       });
     }

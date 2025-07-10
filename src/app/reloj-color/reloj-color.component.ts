@@ -23,12 +23,7 @@ export class RelojColorComponent implements OnInit {
     const minutes = now.getMinutes(); // 0-59
     const seconds = now.getSeconds(); // 0-59
 
-    // Normalizar la hora a un valor entre 0 y 1 para mapear al color
-    // Consideramos 24 horas.
-    // Haremos que la hora sea un valor de brillo.
-    // Por ejemplo, 00:00 -> muy oscuro, 12:00 -> más claro, 23:59 -> oscuro de nuevo
-
-    // Convertir tiempo a un valor único entre 0 y 1 para brillo (HSL-L) o intensidad (RGB)
+    
     // Mapeamos 00:00 a 0, 12:00 a 255 (o un valor alto), y 23:59 de vuelta a 0
     const totalMinutesOfDay = (hours * 60) + minutes; // Total de minutos transcurridos en el día
     const maxMinutesOfDay = 24 * 60; // 1440 minutos en un día
